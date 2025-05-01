@@ -8,11 +8,13 @@ export function PrivateLayout() {
       <div>
         <Navbar />
       </div>
-      <div className="hidden lg:block w-[20%]">
-        <Sidebar />
-      </div>
-      <div>
-        <Outlet />
+      <div className="flex ">
+        <div className="hidden lg:block w-[20%]">
+          <Sidebar />
+        </div>
+        <div className="lg:w-[80%] w-full h-screen overflow-y-auto p-5">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
