@@ -1,20 +1,24 @@
 import { Outlet } from "react-router";
-import { Navbar } from "../Utilities/navbar";
 import { Sidebar } from "../Utilities/sidebar";
+import { HamburgerButton } from "@/components/CustomButton/hamburger-button";
 
 export function PrivateLayout() {
   return (
     <div>
-      <div>
+      {/* <div>
         <Navbar />
-      </div>
-      <div className="flex ">
-        <div className="hidden lg:block w-[20%]">
+      </div> */}
+      <div className="flex lg:flex-row flex-col">
+        <div className="hidden lg:block">
           <Sidebar />
         </div>
-        <div className="lg:w-[80%] w-full h-screen overflow-y-auto p-5">
+        <div className="z-50">
+          <HamburgerButton/>
+        </div>
+        <div className="w-full h-screen overflow-y-auto p-5">
           <Outlet />
         </div>
+        
       </div>
     </div>
   );

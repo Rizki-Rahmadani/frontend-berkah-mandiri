@@ -67,29 +67,29 @@ export function CompPelanggan() {
         </div>
       </div>
 
-      <Table className="bg-[#2C3639] rounded-md">
+      <Table className="">
         <TableCaption>Daftar pelanggan lapak berkah mandiri.</TableCaption>
-        <TableHeader>
+        <TableHeader className="bg-slate-300">
           <TableRow>
-            <TableHead className="w-[100px] text-center text-[#DCD7C9]">
+            <TableHead className="w-[100px] text-center text-primary">
               ID
             </TableHead>
-            <TableHead className="text-center text-[#DCD7C9]">Nama</TableHead>
-            <TableHead className="text-center text-[#DCD7C9]">
+            <TableHead className="text-center text-primary">Nama</TableHead>
+            <TableHead className="text-center text-primary">
               Telepon
             </TableHead>
-            <TableHead className="text-right text-[#DCD7C9]">Alamat</TableHead>
+            <TableHead className="text-right text-primary">Alamat</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {pelanggan.map((data) => (
             <TableRow key={data.id}>
-              <TableCell className="font-medium text-white">
+              <TableCell className="font-medium text-primary">
                 {data.id}
               </TableCell>
-              <TableCell className="text-white">{data.name}</TableCell>
-              <TableCell className="text-white">{data.phone}</TableCell>
-              <TableCell className="text-right text-white">
+              <TableCell className="text-primary">{data.name}</TableCell>
+              <TableCell className="text-primary">{data.phone}</TableCell>
+              <TableCell className="text-right text-primary">
                 {data.address}
               </TableCell>
             </TableRow>

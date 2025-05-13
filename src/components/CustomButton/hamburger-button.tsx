@@ -6,7 +6,7 @@ export const HamburgerButton = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div>
-      <div className="lg:hidden flex items-center justify-center w-10 h-10 text-[#DCD7C9] cursor-pointer transition-all duration-200 ease-in-out">
+      <div className="lg:hidden flex items-center justify-center w-10 h-10 text-primary cursor-pointer transition-all duration-200 ease-in-out">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <CrossIcon /> : <Menu size={35} />}
         </button>
@@ -23,7 +23,7 @@ export const HamburgerButton = () => {
           >
             <CrossIcon />
           </div> */}
-          <div className="fixed top-0 right-0">
+          <div className="fixed top-0 left-0">
             <Sidebar onClose={() => setIsMenuOpen(false)} />
           </div>
         </div>
