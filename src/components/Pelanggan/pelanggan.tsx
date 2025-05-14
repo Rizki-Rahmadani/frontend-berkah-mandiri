@@ -9,46 +9,47 @@ import {
 } from "@/components/ui/table";
 import { Header } from "../header";
 import { AddButton } from "../CustomButton/add-button";
+import { PelangganProps } from "@/lib/types";
 
-const pelanggan = [
+const pelanggan: PelangganProps[] = [
   {
-    id: "01",
+    id: 1,
     name: "Kotrel",
     phone: "082299098221",
     address: "Medan",
   },
   {
-    id: "02",
+    id: 2,
     name: "Arya",
     phone: "082299098234",
     address: "Bali",
   },
   {
-    id: "03",
+    id: 3,
     name: "Medi",
     phone: "082299098245",
     address: "Lampung",
   },
   {
-    id: "04",
+    id: 4,
     name: "Farhan",
     phone: "082299098256",
     address: "Jakarta Selatan",
   },
   {
-    id: "05",
+    id: 5,
     name: "Veni",
     phone: "082299098267",
     address: "Padang",
   },
   {
-    id: "06",
+    id: 6,
     name: "Yudis",
     phone: "082299098278",
     address: "Kalimantan Timur",
   },
   {
-    id: "07",
+    id: 7,
     name: "Muja",
     phone: "082299098289",
     address: "Tangerang",
@@ -57,9 +58,9 @@ const pelanggan = [
 
 export function CompPelanggan() {
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 w-[80%]">
       <div className="flex justify-between">
-        <div className="text-start text-xl font-bold text-[#2C3639] ">
+        <div className="text-start font-medium tracking-wide text-[25px] text-[#2C3639] ">
           <Header title="Data Pelanggan" />
         </div>
         <div className="bg-[#2C3639] p-2 rounded-md text-[#DCD7C9] flex items-center gap-2">
