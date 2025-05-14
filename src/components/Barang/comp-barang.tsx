@@ -39,7 +39,7 @@ export const CompBarang = () => {
                     <Header title="Data Barang"/>
                 </div>
                 <div>
-                    <DialogAddBarang/>
+                    <DialogAddBarang mode="add"/>
                 </div>
             </div>
             <Table>
@@ -59,7 +59,7 @@ export const CompBarang = () => {
                             <TableCell>{data.name}</TableCell>
                             <TableCell>{data.defaultPrice}</TableCell>
                             <TableCell className="flex justify-end gap-2">
-                                <Button className="bg-blue-500">Ubah</Button>
+                                <DialogAddBarang mode="edit" data={data} trigger={<Button className="bg-blue-500">Ubah</Button>}/>
                                 <Button className="bg-red-500">Hapus</Button>
                             </TableCell>
                         </TableRow>
