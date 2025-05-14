@@ -4,6 +4,7 @@ import { Login } from "./pages/Auth/login";
 import { Register } from "./pages/Auth/register";
 import { PrivateLayout } from "./pages/Layout/private-layout";
 import { Pelanggan } from "./pages/Pelanggan";
+import { Barang } from "./pages/Barang";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,6 +27,11 @@ function App() {
           element: <Pelanggan />,
           HydrateFallback: () => <div>Loading...</div>,
         },
+        {
+          path: "/barang",
+          element: <Barang/>,
+          HydrateFallback: () => <div>Loading...</div>
+        }
       ],
     },
   ]);
