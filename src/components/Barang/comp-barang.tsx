@@ -1,8 +1,8 @@
 import { BarangProps } from "@/lib/types"
-import { AddButton } from "../CustomButton/add-button"
 import { Header } from "../header"
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
 import { Button } from "../ui/button"
+import { DialogAddBarang } from "./dialog-add-barang"
 
 export const CompBarang = () => {
     const DataBarang: BarangProps[] = [
@@ -38,8 +38,8 @@ export const CompBarang = () => {
                 <div className="text-start font-medium tracking-wide text-[25px] text-[#2C3639] ">
                     <Header title="Data Barang"/>
                 </div>
-                <div className="bg-[#2C3639] p-2 rounded-md text-[#DCD7C9] flex items-center gap-2">
-                    <AddButton text="Tambah Barang" onClick={() => {}}/>
+                <div>
+                    <DialogAddBarang/>
                 </div>
             </div>
             <Table>
