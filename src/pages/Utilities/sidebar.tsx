@@ -7,7 +7,6 @@ import {
   ShoppingCart,
   ChevronLeft,
   ChevronRight,
-  Badge,
   Package,
 } from "lucide-react";
 import { Link } from "react-router";
