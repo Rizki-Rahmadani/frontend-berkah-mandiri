@@ -8,8 +8,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Header } from "../header";
-import { AddButton } from "../CustomButton/add-button";
 import { PelangganProps } from "@/lib/types";
+import { DialogAddPelanggan } from "./dialog-add-pelanggan";
+import { Button } from "../ui/button";
 
 const pelanggan: PelangganProps[] = [
   {
@@ -63,8 +64,8 @@ export function CompPelanggan() {
         <div className="text-start font-medium tracking-wide text-[25px] text-[#2C3639] ">
           <Header title="Data Pelanggan" />
         </div>
-        <div className="bg-[#2C3639] p-2 rounded-md text-[#DCD7C9] flex items-center gap-2">
-          <AddButton text="Tambah Pelanggan" onClick={() => {}} />
+        <div>
+          <DialogAddPelanggan/>
         </div>
       </div>
 
@@ -80,6 +81,7 @@ export function CompPelanggan() {
               Telepon
             </TableHead>
             <TableHead className="text-right text-primary">Alamat</TableHead>
+            <TableHead className="text-right text-primary">Aksi</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -92,6 +94,10 @@ export function CompPelanggan() {
               <TableCell className="text-primary">{data.phone}</TableCell>
               <TableCell className="text-right text-primary">
                 {data.address}
+              </TableCell>
+              <TableCell className="text-primary text-end space-x-2">
+                <Button className="bg-blue-500 hover:bg-blue-700">Ubah</Button>
+                <Button className="bg-red-500 hover:bg-red-700">Hapus</Button>
               </TableCell>
             </TableRow>
           ))}
