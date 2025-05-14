@@ -65,7 +65,7 @@ export function CompPelanggan() {
           <Header title="Data Pelanggan" />
         </div>
         <div>
-          <DialogAddPelanggan/>
+          <DialogAddPelanggan mode="add" />
         </div>
       </div>
 
@@ -96,7 +96,11 @@ export function CompPelanggan() {
                 {data.address}
               </TableCell>
               <TableCell className="text-primary text-end space-x-2">
-                <Button className="bg-blue-500 hover:bg-blue-700">Ubah</Button>
+                <DialogAddPelanggan 
+                  mode="edit" 
+                  data={data}
+                  trigger={<Button className="bg-blue-500 hover:bg-blue-700">Ubah</Button>}
+                />
                 <Button className="bg-red-500 hover:bg-red-700">Hapus</Button>
               </TableCell>
             </TableRow>
